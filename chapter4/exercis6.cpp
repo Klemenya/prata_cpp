@@ -16,10 +16,10 @@ struct CandyBar{
 
 
 int main(int argc, char ** argv){
-
-    CandyBar snack[3];
+    const int SIZE = 3;
+    CandyBar snack[SIZE];
     
-    for(int i(0); i <3; ++i){
+    for(int i(0); i < SIZE; ++i){
         std::cout << "Enter name of box " << i+1 << ": ";
         std::cin >> snack[i].nameOfBox;
         std::cout << "Weight of box " << i+1 << ": ";
@@ -28,7 +28,7 @@ int main(int argc, char ** argv){
         std::cin >> snack[i].calories;
     }
     
-    for(int i(0); i<3; ++i){
+    for(int i(0); i < SIZE; ++i){
         std::cout << "Name of box " << i+1 << ": " << snack[i].nameOfBox << std::endl;
         std::cout << "Weight of box " << i+1 << ": " << snack[i].weight << std::endl;
         std::cout << "Calories " << i+1 << ": "  << snack[i].calories << std::endl;
