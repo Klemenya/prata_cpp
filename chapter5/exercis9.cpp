@@ -4,7 +4,6 @@
 //	заголовочный файл string и применяйте операции отношений для выполне­
 //	ния проверки.
 
-
 #include <iostream>
 #include <string>
 
@@ -14,10 +13,7 @@ int main(int argc, char ** argv){
     std::string text{};
     int words{};
 
-    while (std::cin >> text){
-        if(text == "done"){
-             break;
-        }
+    while (std::cin >> text && text !="done"){
         words++;
     }
 
@@ -25,4 +21,3 @@ int main(int argc, char ** argv){
 
     return 0;
 }
-
