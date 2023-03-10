@@ -1,4 +1,4 @@
-//7. Разработайте структуру по имени car, которая будет хранить следующую ин­
+//	7. Разработайте структуру по имени car, которая будет хранить следующую ин­
 //	формацию об автомобиле: название производителя в виде строки в символьном 
 //	массиве или в объекте s t ring, а также год выпуска автомобиля в виде целого 
 //	числа. Напишите программу, которая запросит пользователя, сколько автомо­
@@ -18,3 +18,37 @@
 //		Вот ваша коллекция : 
 //		1952 Hudson Hornet 
 //		1951 кaiser 
+
+#include <iostream>
+#include <string>
+
+struct car{
+    std::string manufacturer;
+    int yearOfManufacture;
+
+};
+
+int main(int argc, char ** argv){
+    std::cout << "how many cars to put in the catalog? ";
+    int cars;
+    std::cin >> cars;
+
+    car *arrCars = new car[cars];
+
+    for(int i(0); i< cars; ++i)
+    {
+        std::cout << "Car # " << i+1 << " :\n";
+        std::cout << "Enter manufacturer : ";
+        std::cin >> arrCars[i].manufacturer;
+        std::cout << "Enter year of manufacture : ";
+        std::cin >> arrCars[i].yearOfManufacture;
+    }
+
+    std::cout << "Here is your collection:\n";
+    for(int i(0); i< cars; ++i)
+    {
+        std::cout << arrCars[i].yearOfManufacture << " " << arrCars[i].manufacturer<< "\n";
+    }
+    
+    return 0;
+}
