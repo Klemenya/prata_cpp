@@ -12,3 +12,22 @@
 //		.****
 //		*****
 
+#include <iostream>
+
+int main(int argc, char **argv){
+    std::cout << "Enter the number of lines: ";
+    int nums;
+    std::cin >> nums;
+
+    for(int i(0); i<nums; ++i){
+        for(int j(0); j<nums; ++j){
+            if( i+j+1 < nums){
+                std::cout <<' ';
+            } else {
+                std::cout << '*';
+            }
+        }
+        std::cout << std::endl;
+    }
+    return 0;
+}
